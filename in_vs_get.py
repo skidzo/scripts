@@ -42,7 +42,6 @@ print(
     f"OrderedDict needed: {t.timeit(number=ntimes)/ntimes} (key not in dict)")
 
 my_test_dict = create_dict()
-
 my_ordered_dict = create_ordered_dict()
 
 
@@ -73,7 +72,10 @@ def func3(key):
 
 def func4(key):
     """
-    example for accessing dictionary using the built in 'keys' method and flush everything into a list
+    example for accessing dictionary using the built in 'keys' method and flush 
+    everything into a list
+
+    definately always worse than using an OrderedDict!
     """
     return key in list(my_test_dict.keys())
 
