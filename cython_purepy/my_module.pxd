@@ -8,4 +8,4 @@ cdef double _helper(double a)
 
 cdef class A:
     cdef public double a,b
-    cpdef foo(self, double x)
+    cpdef double foo(self, double x)

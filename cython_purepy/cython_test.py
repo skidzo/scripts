@@ -7,14 +7,14 @@ if __name__ == "__main__":
     t = Timer(lambda: A().foo(5))
     print(f"dict needed: {t.timeit(number=ntimes)/ntimes}")
 
-    t = Timer(lambda: dostuff(ntimes))
+    #t = Timer(lambda: dostuff(ntimes))
 
-    print(f"dict needed: {t.timeit(number=ntimes)/ntimes}")
+    #print(f"dict needed: {t.timeit(number=ntimes)/ntimes}")
     
     print("pure_python")
     
     t = Timer(lambda: B().foo(5))
     print(f"dict needed: {t.timeit(number=ntimes)/ntimes}")
 
-    t = Timer(lambda:_slow_helper(some_function(3)))
-    print(f"dict needed: {t.timeit(number=ntimes)/ntimes}")
+    #t = Timer(lambda:_slow_helper(some_function(3)))
+    #print(f"dict needed: {t.timeit(number=ntimes)/ntimes}")
