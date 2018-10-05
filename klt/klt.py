@@ -8,6 +8,27 @@ calculation of Karhunen- Loève Transformation aka. PCA
 import numpy as np
 from scipy.signal import detrend
 
+def kl_transform(a):
+    """
+    Returns Karhunen Loeve Transform of the input and the transformation matrix and eigenval
+
+    Ex:
+    import numpy as np
+    a  = np.array([[1,2,4],[2,3,10]])
+
+    kk,m = KLT(a)
+    print kk
+    print m
+
+    # to check, the following should return the original a
+    print np.dot(kk.T,m).T
+
+    """
+    val,vec = np.linalg.eig(np.cov(a))
+    klt = np.dot(vec,a)
+    return klt,vec,val
+
+
 class Klt:
     def __init__(self, dim, SnapshotSize):
         self.dim = dim
